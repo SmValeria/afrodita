@@ -1,0 +1,56 @@
+.last-news {
+  padding: 55px 0;
+}
+.last-news__header {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.last-news__box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.last-news__photo-list {
+  font-family: "Roboto", Arial, sans-serif;
+  margin-right: 25px;
+
+  @include tablets {
+    margin-right: 0;
+  }
+}
+
+.last-news__pagination {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.last-news__top {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  width: 160px;
+  flex-shrink: 0;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.last-news__top-title {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.last-news__top-time {
+  color: var(--text-color-dark);
+  margin-bottom: 20px;
+}

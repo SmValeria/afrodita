@@ -1,0 +1,10 @@
+mixin cards(list, className)
+  ul.cards(class=`${className}__cards`)
+    each item in list
+      li.cards__item
+        .cards__visual
+          +image(item.imagePath, 'cards__img', item.title)
+          .cards__img-cap= item.title
+        .cards__desc
+          h3.cards__title= item.textTitle
+          .cards__text= item.text

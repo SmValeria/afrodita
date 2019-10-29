@@ -1,0 +1,11 @@
+include ../data/menu
+include ../mixins/logo
+include ../mixins/menu
+include ../mixins/contacts-with-dropdown
+
+.header
+  .header__container.container
+    +logo('header', false, true)
+    +menu(menu, 'header')
+    +contacts-with-dropdown('header')
+

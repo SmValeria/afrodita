@@ -1,0 +1,14 @@
+mixin copyright(className)
+  .copyright(class=`${className}__copyright`)
+      p
+        | Сделано с любовью и старанием на курсе «HTML + CSS» в
+        = " "
+        a.copyright__link(
+          href="https://loftschool.com/"
+          target="_blank")
+          | LoftSchool
+        | .
+      p
+        | Автор работы:
+        = " "
+        span.copyright__text.copyright__text--bold Прохладов Вадим

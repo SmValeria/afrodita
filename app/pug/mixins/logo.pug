@@ -1,0 +1,8 @@
+include ../data/menu
+mixin logo(className, image, text)
+  a(class=`logo ${className}__logo` href=menu[0].link)
+    if(image)
+      +image('/', 'logo__img', 'Logo')
+    else if (text)
+      h1.logo__text Афродита
+

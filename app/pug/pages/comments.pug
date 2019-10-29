@@ -1,0 +1,26 @@
+include ../mixins/image
+include ../mixins/breadcrumbs
+
+- const pageName = "Отзывы"
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Афродита | Отзывы
+    link(rel='icon', href='./assets/images/favicon.png')
+    link(rel='stylesheet', href='./assets/css/main.min.css')
+  body
+    .wrapper
+      include ../sections/header
+      .page
+        .page__container.container.container--w880
+          +breadcrumbs(pageName, 'page')
+          main.maincontent
+            include ../sections/review
+      include ../sections/flack
+      include ../sections/feedback
+
+      include ../sections/footer

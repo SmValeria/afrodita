@@ -1,0 +1,8 @@
+include ../data/comments
+include ../mixins/photo-list
+include ../mixins/pagination
+
+section.review
+  h2.section-title.review__header Отзывы
+  +photo-list(comments, 'review')
+  +pagination('review', 7)

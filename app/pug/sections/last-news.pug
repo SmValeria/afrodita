@@ -1,0 +1,17 @@
+include ../data/news
+include ../data/top-news
+
+include ../mixins/photo-list
+include ../mixins/images-rows
+include ../mixins/pagination
+
+section.last-news
+  .last-news__container.container
+    h2.section-title.last-news__header Последние новости
+    .last-news__box
+      +photo-list(news, 'last-news')
+      .last-news__top
+        h3.last-news__top-title топ новостей
+        .last-news__top-time за сентябрь
+        +image-rows(topNews, 'last-news')
+    +pagination('last-news', 7)

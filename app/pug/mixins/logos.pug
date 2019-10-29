@@ -1,0 +1,6 @@
+mixin logos(info, className)
+  ul.logos(class=`${className}__logos`)
+    each item in info
+      li.logos__item
+        a.logos__link(href="#")
+          +image(item.imgPath, 'logos__image', item.title)

@@ -1,0 +1,11 @@
+include ../data/socials
+
+include ../mixins/socials
+include ../mixins/copyright
+include ../mixins/logo
+
+.footer
+  .footer__container.container
+    +copyright('footer')
+    +logo('footer', false, true)
+    +socials(socials, 'footer')

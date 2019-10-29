@@ -1,0 +1,6 @@
+mixin image-rows(info, className)
+    ul.image-rows(class=`${className}__image-rows`)
+      each item in info
+        li.image-rows__item
+          a.image-rows__link(href="#")
+            +image(item.imgPath, 'image-rows__image', item.title)

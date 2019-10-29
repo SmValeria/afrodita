@@ -1,0 +1,57 @@
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.4s;
+
+  &:not(:last-of-type) {
+    margin-right: 28px;
+  }
+
+  &:hover .menu__link::before,
+  &--active .menu__link::before{
+    filter: brightness(1) invert(0);
+  }
+
+  &:hover .menu__link,
+  &--active .menu__link {
+    color: var(--orange-color);
+  }
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: block;
+    margin-right: 17px;
+    filter: brightness(0) invert(1);
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: .3s;
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+.menu__item--main .menu__link::before{
+  @include sprite($main-icon);
+}
+
+.menu__item--services .menu__link::before{
+  @include sprite($service-icon);
+}
+
+.menu__item--comments .menu__link::before{
+  @include sprite($feed-icon);
+}

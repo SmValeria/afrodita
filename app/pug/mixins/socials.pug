@@ -1,0 +1,11 @@
+mixin socials(socials, className)
+  .socials(class=`${className}__socials`)
+    h3.socials__title Наши социальные сети
+    ul(class="socials__list")
+      each social in socials
+        li(class=`socials__item socials__item--${social.modifier}`)
+          a(
+            class="socials__link"
+            href=social.link
+          )
+            span.hidden #{social.name}
