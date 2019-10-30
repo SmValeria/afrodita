@@ -1,5 +1,5 @@
 mixin icon-list(list, className)
-  ul.icon-list(class=className)
+  ul.icon-list(class=`${className}__list`)
     each item in list
       li.icon-list__item(class=`icon-list__item--${item.iconModifier}`)
         .icon-list__icon
